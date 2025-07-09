@@ -68,37 +68,69 @@ export default function Home() {
 </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              <div className="bg-white rounded-lg shadow p-6 flex flex-col items-start">
-                <span className="font-bold text-lg text-green-700 mb-2">Fresh Produce</span>
-                <p className="text-gray-700">Locally sourced fruits, vegetables, and herbs.</p>
+              {/* Fresh Produce */}
+              <div className="relative rounded-lg shadow overflow-hidden group min-h-[180px] flex items-end" style={{backgroundImage: 'url(/file.svg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
+                <div className="relative z-10 p-6 w-full">
+                  <span className="font-bold text-lg text-white mb-2 block">Fresh Produce</span>
+                  <p className="text-gray-100">Locally sourced fruits, vegetables, and herbs.</p>
+                </div>
               </div>
-              <div className="bg-white rounded-lg shadow p-6 flex flex-col items-start">
-                <span className="font-bold text-lg text-green-700 mb-2">Meat & Seafood</span>
-                <p className="text-gray-700">A variety of fresh, frozen, and organic meats and seafood options.</p>
+              {/* Meat & Seafood */}
+              <div className="relative rounded-lg shadow overflow-hidden group min-h-[180px] flex items-end" style={{backgroundImage: 'url(/window.svg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
+                <div className="relative z-10 p-6 w-full">
+                  <span className="font-bold text-lg text-white mb-2 block">Meat & Seafood</span>
+                  <p className="text-gray-100">A variety of fresh, frozen, and organic meats and seafood options.</p>
+                </div>
               </div>
-              <div className="bg-white rounded-lg shadow p-6 flex flex-col items-start">
-                <span className="font-bold text-lg text-green-700 mb-2">Dairy & Bakery</span>
-                <p className="text-gray-700">Fresh dairy products, cheeses, yogurts, freshly baked bread, and pastries.</p>
+              {/* Dairy & Bakery */}
+              <div className="relative rounded-lg shadow overflow-hidden group min-h-[180px] flex items-end" style={{backgroundImage: 'url(/globe.svg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
+                <div className="relative z-10 p-6 w-full">
+                  <span className="font-bold text-lg text-white mb-2 block">Dairy & Bakery</span>
+                  <p className="text-gray-100">Fresh dairy products, cheeses, yogurts, freshly baked bread, and pastries.</p>
+                </div>
               </div>
-              <div className="bg-white rounded-lg shadow p-6 flex flex-col items-start">
-                <span className="font-bold text-lg text-green-700 mb-2">Pantry Essentials</span>
-                <p className="text-gray-700">Canned goods, grains, oils, condiments, and specialty items.</p>
+              {/* Pantry Essentials */}
+              <div className="relative rounded-lg shadow overflow-hidden group min-h-[180px] flex items-end" style={{backgroundImage: 'url(/vercel.svg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
+                <div className="relative z-10 p-6 w-full">
+                  <span className="font-bold text-lg text-white mb-2 block">Pantry Essentials</span>
+                  <p className="text-gray-100">Canned goods, grains, oils, condiments, and specialty items.</p>
+                </div>
               </div>
-              <div className="bg-white rounded-lg shadow p-6 flex flex-col items-start">
-                <span className="font-bold text-lg text-green-700 mb-2">Health & Wellness</span>
-                <p className="text-gray-700">Organic and gluten-free products, as well as supplements and health foods.</p>
+              {/* Health & Wellness */}
+              <div className="relative rounded-lg shadow overflow-hidden group min-h-[180px] flex items-end" style={{backgroundImage: 'url(/next.svg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
+                <div className="relative z-10 p-6 w-full">
+                  <span className="font-bold text-lg text-white mb-2 block">Health & Wellness</span>
+                  <p className="text-gray-100">Organic and gluten-free products, as well as supplements and health foods.</p>
+                </div>
               </div>
-              <div className="bg-white rounded-lg shadow p-6 flex flex-col items-start">
-                <span className="font-bold text-lg text-green-700 mb-2">Frozen Foods</span>
-                <p className="text-gray-700">A wide selection of frozen meals, snacks, and vegetables.</p>
+              {/* Frozen Foods */}
+              <div className="relative rounded-lg shadow overflow-hidden group min-h-[180px] flex items-end" style={{backgroundImage: 'url(/file.svg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
+                <div className="relative z-10 p-6 w-full">
+                  <span className="font-bold text-lg text-white mb-2 block">Frozen Foods</span>
+                  <p className="text-gray-100">A wide selection of frozen meals, snacks, and vegetables.</p>
+                </div>
               </div>
-              <div className="bg-white rounded-lg shadow p-6 flex flex-col items-start">
-                <span className="font-bold text-lg text-green-700 mb-2">Beverages</span>
-                <p className="text-gray-700">A full range of sodas, juices, water, alcoholic beverages, and specialty drinks.</p>
+              {/* Beverages */}
+              <div className="relative rounded-lg shadow overflow-hidden group min-h-[180px] flex items-end" style={{backgroundImage: 'url(/window.svg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
+                <div className="relative z-10 p-6 w-full">
+                  <span className="font-bold text-lg text-white mb-2 block">Beverages</span>
+                  <p className="text-gray-100">A full range of sodas, juices, water, alcoholic beverages, and specialty drinks.</p>
+                </div>
               </div>
-              <div className="bg-white rounded-lg shadow p-6 flex flex-col items-start">
-                <span className="font-bold text-lg text-green-700 mb-2">Household & Personal Care</span>
-                <p className="text-gray-700">Cleaning products, toiletries, and home essentials.</p>
+              {/* Household & Personal Care */}
+              <div className="relative rounded-lg shadow overflow-hidden group min-h-[180px] flex items-end" style={{backgroundImage: 'url(/globe.svg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
+                <div className="relative z-10 p-6 w-full">
+                  <span className="font-bold text-lg text-white mb-2 block">Household & Personal Care</span>
+                  <p className="text-gray-100">Cleaning products, toiletries, and home essentials.</p>
+                </div>
               </div>
               {/* Empty cell for symmetry */}
               <div className=""></div>
@@ -118,6 +150,7 @@ export default function Home() {
   </p>
 </div>
 
+ 
 
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
     <div className="bg-white rounded-xl shadow-md p-6 flex flex-col sm:flex-row items-start gap-4">
@@ -158,6 +191,43 @@ export default function Home() {
         <h3 className="font-semibold text-lg text-green-800">Exceptional Service</h3>
         <p className="text-gray-700">Our staff is trained to offer friendly, helpful, and knowledgeable assistance to ensure an enjoyable shopping experience.</p>
       </div>
+    </div>
+  </div>
+
+  <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+    {/* Store 1 */}
+    <div className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+      <h3 className="font-semibold text-lg text-green-800 mb-2">Lomyad Supermarket - 2RCQ+F9F, Addis Ababa</h3>
+      <div className="w-full aspect-video rounded-lg overflow-hidden mb-2 border border-green-200">
+        <iframe
+          src="https://www.google.com/maps?q=2RCQ%2BF9F,+Addis+Ababa&output=embed"
+          width="100%"
+          height="220"
+          style={{ border: 0 }}
+          allowFullScreen={true}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Lomyad Supermarket 1"
+        ></iframe>
+      </div>
+      <a href="https://www.google.com/maps?s=web&sca_esv=f7156635f6e9a261&lqi=ChJsb215YWQgc3VwZXJtYXJrZXRIhKqanN2BgIAIWhwQABABGAAYASISbG9teWFkIHN1cGVybWFya2V0kgELc3VwZXJtYXJrZXSqATsQATIfEAEiG5N0MVqWpQIXFZ47fyyXwcsrhwBZTg_zyf91ujIWEAIiEmxvbXlhZCBzdXBlcm1hcmtldA&phdesc=TyRItVlOamk&vet=12ahUKEwicmefa1q-OAxVwnf0HHd8JNqwQ1YkKegQIGxAB..i&cs=1&um=1&ie=UTF-8&fb=1&gl=et&sa=X&geocode=KTVgyEmhmksWMTIIwpkByX2s&daddr=2RCQ%2BF9F,+Addis+Ababa" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline text-sm">View on Google Maps</a>
+    </div>
+    {/* Store 2 */}
+    <div className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+      <h3 className="font-semibold text-lg text-green-800 mb-2">Lomyad Supermarket - 2VGH+57G, A2, Addis Ababa</h3>
+      <div className="w-full aspect-video rounded-lg overflow-hidden mb-2 border border-green-200">
+        <iframe
+          src="https://www.google.com/maps?q=2VGH%2B57G,+A2,+Addis+Ababa&output=embed"
+          width="100%"
+          height="220"
+          style={{ border: 0 }}
+          allowFullScreen={true}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Lomyad Supermarket 2"
+        ></iframe>
+      </div>
+      <a href="https://www.google.com/maps?s=web&sca_esv=f7156635f6e9a261&lqi=ChJsb215YWQgc3VwZXJtYXJrZXRIvY6FuMCtgIAIWhwQABABGAAYASISbG9teWFkIHN1cGVybWFya2V0kgELc3VwZXJtYXJrZXSqATsQATIfEAEiG5N0MVqWpQIXFZ47fyyXwcsrhwBZTg_zyf91ujIWEAIiEmxvbXlhZCBzdXBlcm1hcmtldA&phdesc=x64nvjgaBHk&vet=12ahUKEwicmefa1q-OAxVwnf0HHd8JNqwQ1YkKegQIHxAB..i&cs=1&um=1&ie=UTF-8&fb=1&gl=et&sa=X&geocode=Kem_YD59kUsWMSRe_60THKDt&daddr=2VGH%2B57G,+A2,+Addis+Ababa" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline text-sm">View on Google Maps</a>
     </div>
   </div>
 </section>
