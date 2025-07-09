@@ -35,7 +35,7 @@ export default function Navbar() {
           <hr className="block sm:hidden border-t border-white/20 mx-4" />
         </li>
         <li>
-          <Link href="#about">
+          <Link href="/aboutus">
             <span className="text-white hover:text-green-600 transition-colors cursor-pointer block py-2 sm:py-0 px-4 sm:px-0">About</span>
           </Link>
           <hr className="block sm:hidden border-t border-white/20 mx-4" />
