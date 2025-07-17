@@ -232,6 +232,44 @@ export default function Home() {
   </div>
 </section>
 
+  {/* Client Testimonials Section */}
+  <section className="w-full max-w-5xl mx-auto px-4 pb-16">
+    <h2 className="text-2xl font-bold text-green-900 mb-6 text-center">What Our Customers Say</h2>
+    <div className="relative">
+      <div className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-green-200 scrollbar-track-green-50">
+        {/* Testimonial 1 */}
+        <div className="min-w-[320px] max-w-[350px] bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center snap-center">
+          {/* <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client 1" className="w-16 h-16 rounded-full mb-3 border-4 border-green-200 object-cover" /> */}
+          <h3 className="font-semibold text-green-800 text-lg mb-1">Sara T.</h3>
+          <p className="text-gray-600 text-center mb-2 text-sm">"Lomyad Supermarket always has the freshest produce and the staff are incredibly friendly. Shopping here is a pleasure!"</p>
+          <span className="text-yellow-400 text-lg">★★★★★</span>
+        </div>
+        {/* Testimonial 2 */}
+        <div className="min-w-[320px] max-w-[350px] bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center snap-center">
+          {/* <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 2" className="w-16 h-16 rounded-full mb-3 border-4 border-green-200 object-cover" /> */}
+          <h3 className="font-semibold text-green-800 text-lg mb-1">Michael B.</h3>
+          <p className="text-gray-600 text-center mb-2 text-sm">"Great selection, competitive prices, and a clean environment. I highly recommend Lomyad to everyone in Addis!"</p>
+          <span className="text-yellow-400 text-lg">★★★★★</span>
+        </div>
+        {/* Testimonial 3 */}
+        <div className="min-w-[320px] max-w-[350px] bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center snap-center">
+          {/* <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client 3" className="w-16 h-16 rounded-full mb-3 border-4 border-green-200 object-cover" /> */}
+          <h3 className="font-semibold text-green-800 text-lg mb-1">Helen M.</h3>
+          <p className="text-gray-600 text-center mb-2 text-sm">"I love the variety and the customer service is top-notch. The loyalty program is a great bonus!"</p>
+          <span className="text-yellow-400 text-lg">★★★★★</span>
+        </div>
+        {/* Testimonial 4 */}
+        <div className="min-w-[320px] max-w-[350px] bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center snap-center">
+          {/* <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Client 4" className="w-16 h-16 rounded-full mb-3 border-4 border-green-200 object-cover" /> */}
+          <h3 className="font-semibold text-green-800 text-lg mb-1">Samuel K.</h3>
+          <p className="text-gray-600 text-center mb-2 text-sm">"Convenient locations and always well-stocked. Lomyad is my go-to supermarket!"</p>
+          <span className="text-yellow-400 text-lg">★★★★★</span>
+        </div>
+      </div>
+      {/* Optional: Add left/right scroll buttons for desktop */}
+    </div>
+  </section>
+
       </div>
     </div>
   );
