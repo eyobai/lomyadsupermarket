@@ -4,6 +4,7 @@ import ImageSlider from "./ImageSlider";
 
 export default function Home() {
   return (
+    <div className="bg-white">
     <div className="grid grid-rows-[auto_1fr_20px] items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
       <div className="row-start-1 w-full">
         <div style={{ position: 'relative', background: '#4CA809' }}>
@@ -69,65 +70,65 @@ export default function Home() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {/* Fresh Produce */}
-              <div className="relative rounded-lg shadow overflow-hidden group min-h-[180px] flex items-end" style={{backgroundImage: 'url(/file.svg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+              <div className="relative rounded-lg shadow overflow-hidden group min-h-[180px] flex items-end" style={{backgroundImage: 'url(/assets/lom1.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
-                <div className="relative z-10 p-6 w-full">
+                <div className="relative z-10 p-6 w-full bg-black/60 rounded-lg">
                   <span className="font-bold text-lg text-white mb-2 block">Fresh Produce</span>
                   <p className="text-gray-100">Locally sourced fruits, vegetables, and herbs.</p>
                 </div>
               </div>
               {/* Meat & Seafood */}
-              <div className="relative rounded-lg shadow overflow-hidden group min-h-[180px] flex items-end" style={{backgroundImage: 'url(/window.svg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+              <div className="relative rounded-lg shadow overflow-hidden group min-h-[180px] flex items-end" style={{backgroundImage: 'url(/assets/lom2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
-                <div className="relative z-10 p-6 w-full">
+                <div className="relative z-10 p-6 w-full bg-black/60 rounded-lg">
                   <span className="font-bold text-lg text-white mb-2 block">Meat & Seafood</span>
                   <p className="text-gray-100">A variety of fresh, frozen, and organic meats and seafood options.</p>
                 </div>
               </div>
               {/* Dairy & Bakery */}
               <div className="relative rounded-lg shadow overflow-hidden group min-h-[180px] flex items-end" style={{backgroundImage: 'url(/globe.svg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
-                <div className="relative z-10 p-6 w-full">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
+                <div className="relative z-10 p-6 w-full bg-black/60 rounded-lg">
                   <span className="font-bold text-lg text-white mb-2 block">Dairy & Bakery</span>
                   <p className="text-gray-100">Fresh dairy products, cheeses, yogurts, freshly baked bread, and pastries.</p>
                 </div>
               </div>
               {/* Pantry Essentials */}
               <div className="relative rounded-lg shadow overflow-hidden group min-h-[180px] flex items-end" style={{backgroundImage: 'url(/vercel.svg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
-                <div className="relative z-10 p-6 w-full">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
+                <div className="relative z-10 p-6 w-full bg-black/60 rounded-lg">
                   <span className="font-bold text-lg text-white mb-2 block">Pantry Essentials</span>
                   <p className="text-gray-100">Canned goods, grains, oils, condiments, and specialty items.</p>
                 </div>
               </div>
               {/* Health & Wellness */}
               <div className="relative rounded-lg shadow overflow-hidden group min-h-[180px] flex items-end" style={{backgroundImage: 'url(/next.svg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
-                <div className="relative z-10 p-6 w-full">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
+                <div className="relative z-10 p-6 w-full bg-black/60 rounded-lg">
                   <span className="font-bold text-lg text-white mb-2 block">Health & Wellness</span>
                   <p className="text-gray-100">Organic and gluten-free products, as well as supplements and health foods.</p>
                 </div>
               </div>
               {/* Frozen Foods */}
               <div className="relative rounded-lg shadow overflow-hidden group min-h-[180px] flex items-end" style={{backgroundImage: 'url(/file.svg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
-                <div className="relative z-10 p-6 w-full">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
+                <div className="relative z-10 p-6 w-full bg-black/60 rounded-lg">
                   <span className="font-bold text-lg text-white mb-2 block">Frozen Foods</span>
                   <p className="text-gray-100">A wide selection of frozen meals, snacks, and vegetables.</p>
                 </div>
               </div>
               {/* Beverages */}
               <div className="relative rounded-lg shadow overflow-hidden group min-h-[180px] flex items-end" style={{backgroundImage: 'url(/window.svg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
-                <div className="relative z-10 p-6 w-full">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
+                <div className="relative z-10 p-6 w-full bg-black/60 rounded-lg">
                   <span className="font-bold text-lg text-white mb-2 block">Beverages</span>
                   <p className="text-gray-100">A full range of sodas, juices, water, alcoholic beverages, and specialty drinks.</p>
                 </div>
               </div>
               {/* Household & Personal Care */}
               <div className="relative rounded-lg shadow overflow-hidden group min-h-[180px] flex items-end" style={{backgroundImage: 'url(/globe.svg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
-                <div className="relative z-10 p-6 w-full">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity group-hover:opacity-80"></div>
+                <div className="relative z-10 p-6 w-full bg-black/60 rounded-lg">
                   <span className="font-bold text-lg text-white mb-2 block">Household & Personal Care</span>
                   <p className="text-gray-100">Cleaning products, toiletries, and home essentials.</p>
                 </div>
@@ -271,6 +272,8 @@ export default function Home() {
   </section>
 
       </div>
+    </div>
+
     </div>
   );
 }
