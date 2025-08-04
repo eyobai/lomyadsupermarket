@@ -3,9 +3,16 @@ import Image from "next/image";
 import { useState } from "react";
 import Navbar from "../Navbar";
 const images = [
-  { src: "/assets/lom1.jpg", alt: "Supermarket 1" },
-  { src: "/assets/lom2.jpg", alt: "Supermarket 2" },
-  // Add more images here if needed
+  { src: "/assets/home.jpg", alt: "Supermarket 1" },
+  { src: "/assets/lom1.jpg", alt: "Supermarket 2" },
+  { src: "/assets/lom2.jpg", alt: "Supermarket 3" },
+  { src: "/assets/lom3.jpg", alt: "Supermarket 4" },
+  { src: "/assets/bakery.jpg", alt: "Bakery Section" },
+  { src: "/assets/beverage.jpg", alt: "Beverage Section" },
+  { src: "/assets/essentials.jpg", alt: "Essentials Section" },
+  { src: "/assets/health.jpg", alt: "Health & Wellness Section" },
+  { src: "/assets/meat.jpg", alt: "Meat & Seafood Section" },
+  { src: "/assets/personal.jpg", alt: "Personal Care Section" },
 ];
 
 export default function GalleryPage() {
