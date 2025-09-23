@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "./Navbar";
 import ImageSlider from "./ImageSlider";
+import { FaFacebookF, FaInstagram, FaTelegram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -467,7 +468,22 @@ export default function Home() {
       </div>
     </div>
   </section>
+      {/* Floating Social Media Bar */}
+      <div className="fixed right-4 bottom-4 z-50 flex flex-col gap-3">
+        <a href="https://web.facebook.com/p/Lomyad-Supermarket-and-Daily-Fresh-100057578584176/?_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-11 h-11 rounded-full bg-[#0866FF] text-white flex items-center justify-center shadow-lg hover:bg-[#3a8507] transition-transform hover:-translate-y-0.5">
+          <FaFacebookF size={18} />
+        </a>
+        {/* <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-11 h-11 rounded-full bg-[#4CA809] text-white flex items-center justify-center shadow-lg hover:bg-[#3a8507] transition-transform hover:-translate-y-0.5">
+          <FaInstagram size={18} />
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-11 h-11 rounded-full bg-[#4CA809] text-white flex items-center justify-center shadow-lg hover:bg-[#3a8507] transition-transform hover:-translate-y-0.5">
+          <FaWhatsapp size={18} />
+        </a> */}
+        <a href="https://t.me/LomyadSupermarketOfficial" target="_blank" rel="noopener noreferrer" aria-label="Telegram" className="w-11 h-11 rounded-full bg-[#1C93E3] text-white flex items-center justify-center shadow-lg hover:bg-[#3a8507] transition-transform hover:-translate-y-0.5">
+          <FaTelegram size={18} />
+        </a>
       </div>
+    </div>
     </div>
   );
 }
