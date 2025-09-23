@@ -7,7 +7,7 @@ const slides = [
   {
     title: "Welcome to Lomyad Supermarket",
     description: "Experience a modern shopping environment with quality products and exceptional service for your family.",
-    image: "/assets/home.jpg",
+    image: "/assets/home1.jpg",
   },
   {
     title: "Fresh Groceries Every Day!",
