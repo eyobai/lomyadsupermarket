@@ -1,4 +1,37 @@
+"use client";
+import { useState } from "react";
 export default function Footer() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<null | { type: "success" | "error"; text: string }>(null);
+  const [showToast, setShowToast] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus(null);
+    if (loading) return; // guard against double submit
+    setLoading(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.ok) throw new Error(data.error || "Failed to send");
+      setStatus({ type: "success", text: "Message sent successfully! We'll get back to you soon." });
+      setName("");
+      setEmail("");
+      setMessage("");
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 3000);
+    } catch (err) {
+      setStatus({ type: "error", text: "Sorry, we couldn't send your message. Please try again later." });
+    }
+    setLoading(false);
+  }
   return (
     <footer id="contact" className="bg-[#4CA809] text-white py-12">
       <div className="max-w-5xl mx-auto px-4">
@@ -31,7 +64,7 @@ export default function Footer() {
               <li>Dairy & Bakery</li>
               <li>Pantry Essentials</li>
               <li>Health & Wellness</li>
-              <li>Frozen Foods</li>
+              <li>Frozen foods</li>
               <li>Beverages</li>
               <li>Household & Personal Care</li>
             </ul>
@@ -72,6 +105,89 @@ export default function Footer() {
                 </a>
               </p>
             </div>
+
+            {/* Contact Form */}
+            <form onSubmit={handleSubmit} className="mt-6 bg-white/10 backdrop-blur-sm rounded-lg p-4 space-y-3">
+              <div>
+                <label className="block text-sm mb-1" htmlFor="cf-name">Your Name</label>
+                <input
+  id="cf-name"
+  type="text"
+  required
+  value={name}
+  onChange={(e) => setName(e.target.value)}
+  className="w-full rounded-md border border-gray-300 px-3 py-2 text-[#1b1b1b] placeholder-gray-500 focus:outline-none"
+  placeholder="Enter your name"
+/>
+
+              </div>
+              <div>
+                <label className="block text-sm mb-1" htmlFor="cf-email">Your Email</label>
+                <input
+                  id="cf-email"
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                className="w-full rounded-md border border-gray-300 px-3 py-2 text-[#1b1b1b] placeholder-gray-500 focus:outline-none"
+                  placeholder="you@example.com"
+                />
+              </div>
+              <div>
+                <label className="block text-sm mb-1" htmlFor="cf-message">Message</label>
+                <textarea
+                  id="cf-message"
+                  required
+                  rows={4}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+               className="w-full rounded-md border border-gray-300 px-3 py-2 text-[#1b1b1b] placeholder-gray-500 focus:outline-none"
+                  placeholder="How can we help you?"
+                />
+              </div>
+              <button
+  type="submit"
+  disabled={loading}
+  className={`inline-flex items-center justify-center bg-white text-[#4CA809] font-semibold px-4 py-2 rounded-md transition-colors ${
+    loading ? "opacity-70 cursor-not-allowed" : "hover:bg-green-50"
+  }`}
+>
+  {loading ? (
+    <>
+      <svg
+        className="animate-spin h-5 w-5 mr-2 text-[#4CA809]"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <circle
+          className="opacity-25"
+          cx="12"
+          cy="12"
+          r="10"
+          stroke="currentColor"
+          strokeWidth="4"
+        ></circle>
+        <path
+          className="opacity-75"
+          fill="currentColor"
+          d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+        ></path>
+      </svg>
+      Sending...
+    </>
+  ) : (
+    "Send Message"
+  )}
+</button>
+
+              {status && (
+                <p className={`${status.type === "success" ? "text-white" : "text-red-200"} text-sm`}>
+                  {status.text}
+                </p>
+              )}
+              <p className="text-xs text-green-100/80">The message will be sent to info@lomyadsupermarket.com</p>
+            </form>
           </div>
         </div>
         
@@ -80,6 +196,17 @@ export default function Footer() {
           <p>&copy; 2024 Lomyad Supermarket. All rights reserved.</p>
         </div>
       </div>
+      {showToast && (
+        <div className="fixed bottom-6 right-6 z-[60]">
+          <div className="flex items-center gap-3 rounded-lg bg-white/95 text-[#1b1b1b] shadow-xl px-4 py-3 ring-1 ring-black/5">
+            <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#4CA809] text-white text-sm">✓</span>
+            <div className="text-sm">
+              <p className="font-semibold text-[#2a2a2a]">Message sent</p>
+              <p className="text-[#3a3a3a]">We'll get back to you soon.</p>
+            </div>
+          </div>
+        </div>
+      )}
     </footer>
   );
-} 
+}
